@@ -1,0 +1,840 @@
+/* Body Styling: Sets global styles for the entire page */
+body {
+    font-family: 'Open Sans', 'Roboto', Arial, sans-serif; /* Clean, professional font stack inspired by D&B */
+    margin: 0;
+    padding: 0;
+    background: #f5f6f5; /* Light gray background for a neutral, D&B-inspired look */
+    color: #000; /* Black text for all elements except navigation, buttons, and footer */
+    line-height: 1.6; /* Improved readability with increased line spacing */
+}
+
+/* Container Styling: Centers and constrains content width */
+.container {
+    width: 90%; /* Responsive width */
+    max-width: 1280px; /* Maximum width for larger screens, inspired by D&B */
+    margin: auto;
+    overflow: hidden; /* Prevents content overflow */
+    padding: 0 15px; /* Tight padding to reduce white space */
+}
+
+/* Header Styling: Sticky navigation bar with D&B-inspired blue */
+header {
+    background: #005670; /* Dark blue for professional look */
+    color: #fff; /* White text for contrast */
+    padding: 12px 0; /* Compact padding to reduce white space */
+    position: sticky;
+    top: 0;
+    z-index: 100; /* Ensures header stays above other content */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Logo Styling: Displays company logo in header */
+header .logo {
+    float: left;
+    height: 50px; /* Compact logo size */
+}
+
+/* Navigation Styling: Right-aligned menu */
+header nav {
+    float: right;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline-block;
+    margin-left: 15px; /* Spacing between nav items */
+}
+
+header nav ul li a {
+    color: #fff; /* White text for navigation links */
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500; /* Medium weight for clarity */
+    padding: 8px 12px; /* Compact padding */
+    transition: background 0.3s ease; /* Smooth hover effect */
+}
+
+header nav ul li a.active,
+header nav ul li a:hover {
+    background: #007a99; /* Lighter blue for active/hover states */
+    border-radius: 5px;
+}
+
+/* Breadcrumb Styling: Navigation trail */
+.breadcrumbs {
+    background: #fff; /* White background for contrast */
+    padding: 10px 15px; /* Compact padding */
+    margin: 10px 0; /* Reduced margin */
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    font-size: 14px;
+}
+
+.breadcrumbs ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.breadcrumbs li {
+    margin-right: 8px;
+}
+
+.breadcrumbs li:not(:last-child)::after {
+    content: '>';
+    margin-left: 8px;
+    color: #666; /* Gray separator */
+}
+
+.breadcrumbs a {
+    color: #005670; /* D&B-inspired blue for links */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.breadcrumbs a:hover {
+    color: #007a99; /* Lighter blue on hover */
+}
+
+.breadcrumbs .current {
+    color: #000; /* Black for current page */
+    font-weight: 500;
+}
+
+/* Hero Section: Prominent banner with solid background */
+.hero {
+    background: #005670; /* D&B-inspired blue for all pages */
+    height: 300px; /* Adjusted height for consistency */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Hero Content Styling: Text within hero sections */
+.hero-content {
+    text-align: center;
+    color: #fff; /* White text for readability */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Shadow for contrast */
+    padding: 15px 25px; /* Padding for text area */
+    max-width: 80%; /* Constrain width for readability */
+}
+
+.hero-content h1,
+.hero-content p {
+    font-size: 24px; /* Larger size for uniformity */
+    margin: 5px 0; /* Tightened margin */
+}
+
+.hero-content h1 {
+    font-weight: 700; /* Bold for emphasis */
+}
+
+/* Button Styling: Action buttons across the site */
+.btn {
+    display: inline-block;
+    background: #005670; /* D&B-inspired blue */
+    color: #fff; /* White text for contrast */
+    padding: 10px 20px; /* Compact padding */
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: background 0.3s ease;
+    margin: 10px 5px; /* Space between buttons */
+}
+
+.btn:hover {
+    background: #007a99; /* Lighter blue on hover */
+}
+
+/* Filter Button Styling: Order filter controls */
+.filter-btn {
+    margin-right: 10px;
+}
+
+.filter-btn.active {
+    background: #007a99; /* Active state matches button hover */
+}
+
+/* Section Styling: Content sections */
+.promotions,
+.featured-products,
+.testimonials,
+.products,
+.about,
+.feedback,
+.services,
+.faq {
+    padding: 30px 0; /* Adjusted padding to fit content */
+}
+
+/* Grid Layouts: Responsive card layouts */
+.promo-grid,
+.product-grid,
+.testimonial-grid,
+.team-grid,
+.case-study-grid,
+.about-grid,
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive multi-column grid */
+    gap: 15px; /* Consistent spacing */
+}
+
+.faq .container {
+    display: grid;
+    grid-template-columns: 1fr; /* Single-column layout for FAQs */
+    gap: 15px;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Fixed 2-column layout for contact form and info */
+    gap: 15px;
+}
+
+/* Container Styling: Content boxes */
+.about-container,
+.values-container,
+.team-container,
+.why-choose-container,
+.feedback-container,
+.feedback-info-container,
+.feedback-form-container,
+.map-container {
+    background: #fff; /* White background for contrast */
+    padding: 15px; /* Reduced padding */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    margin-bottom: 15px; /* Reduced margin */
+    opacity: 0.95; /* Slight transparency for D&B-inspired look */
+}
+
+.team-container {
+    grid-column: 1 / -1; /* Span all columns to start on a new row */
+}
+
+/* Card Styling: Individual content cards */
+.promo-card,
+.product-card,
+.service-card,
+.testimonial-card,
+.team-card,
+.case-study-card,
+.faq-item {
+    background: #fff;
+    padding: 15px; /* Reduced padding */
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease; /* Smooth hover effect */
+    opacity: 0.95;
+}
+
+.promo-card:hover,
+.product-card:hover,
+.service-card:hover,
+.testimonial-card:hover,
+.team-card:hover,
+.case-study-card:hover,
+.faq-item:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+/* Image Styling: Images within cards */
+.promo-card img,
+.product-card img,
+.service-card img,
+.team-card img,
+.case-study-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Video Styling: Videos in case study cards */
+.case-study-video {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px; /* Reduced margin */
+}
+
+/* Filter Bar Styling: Order filter controls */
+.filter-bar {
+    margin: 10px 0; /* Reduced margin */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+}
+
+.filter-bar select {
+    padding: 8px;
+    border: 1px solid #d1d3d4; /* Light gray border */
+    border-radius: 5px;
+    font-size: 14px;
+    color: #000; /* Black text for select dropdown */
+}
+
+/* Contact Form Styling: Form inputs */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Reduced gap */
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 8px; /* Reduced padding */
+    border: 1px solid #d1d3d4;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #000; /* Black text for form inputs */
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 100px; /* Reduced height to fit content */
+}
+
+/* Map Container Styling: Embedded map image */
+.map-container img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-top: 10px; /* Reduced margin */
+}
+
+/* FAQ Item Styling: Accordion-style FAQs */
+.faq-item
+
+System: I'm sorry, but it looks like the response was cut off. Let me provide the complete updated artifacts for `styles.css` and `about.html` to ensure "Our Team" in `about.html` appears below "Our Story", "Our Values", and "Why Choose Us" on a new row, not in the same line, with "Our Projects" remaining last.
+
+### Approach (Recap)
+- **about.html**:
+  - Keep the HTML structure with sections in order: "Our Story", "Our Values", "Why Choose Us", "Our Team", "Our Projects".
+  - No changes needed to HTML, as the order is correct.
+- **styles.css**:
+  - Add `grid-column: 1 / -1` to `.team-container` to make "Our Team" span all columns, forcing it to a new row.
+  - Ensure `.about-grid` retains `grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))` for other sections.
+  - No changes to other styles.
+- **Testing**:
+  - Verify "Our Team" starts on a new row below "Our Story", "Our Values", and "Why Choose Us".
+  - Confirm `.about-grid` layout and image/video loading.
+
+### Updated Artifacts
+
+#### styles.css
+<xaiArtifact artifact_id="7062b43f-3f29-4ca9-ae03-7247433f4c3b" artifact_version_id="24959786-30bf-4e8e-85e2-2a74f4db4f12" title="styles.css" contentType="text/css">
+/* Body Styling: Sets global styles for the entire page */
+body {
+    font-family: 'Open Sans', 'Roboto', Arial, sans-serif; /* Clean, professional font stack inspired by D&B */
+    margin: 0;
+    padding: 0;
+    background: #f5f6f5; /* Light gray background for a neutral, D&B-inspired look */
+    color: #000; /* Black text for all elements except navigation, buttons, and footer */
+    line-height: 1.6; /* Improved readability with increased line spacing */
+}
+
+/* Container Styling: Centers and constrains content width */
+.container {
+    width: 90%; /* Responsive width */
+    max-width: 1280px; /* Maximum width for larger screens, inspired by D&B */
+    margin: auto;
+    overflow: hidden; /* Prevents content overflow */
+    padding: 0 15px; /* Tight padding to reduce white space */
+}
+
+/* Header Styling: Sticky navigation bar with D&B-inspired blue */
+header {
+    background: #005670; /* Dark blue for professional look */
+    color: #fff; /* White text for contrast */
+    padding: 12px 0; /* Compact padding to reduce white space */
+    position: sticky;
+    top: 0;
+    z-index: 100; /* Ensures header stays above other content */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Logo Styling: Displays company logo in header */
+header .logo {
+    float: left;
+    height: 50px; /* Compact logo size */
+}
+
+/* Navigation Styling: Right-aligned menu */
+header nav {
+    float: right;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline-block;
+    margin-left: 15px; /* Spacing between nav items */
+}
+
+header nav ul li a {
+    color: #fff; /* White text for navigation links */
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500; /* Medium weight for clarity */
+    padding: 8px 12px; /* Compact padding */
+    transition: background 0.3s ease; /* Smooth hover effect */
+}
+
+header nav ul li a.active,
+header nav ul li a:hover {
+    background: #007a99; /* Lighter blue for active/hover states */
+    border-radius: 5px;
+}
+
+/* Breadcrumb Styling: Navigation trail */
+.breadcrumbs {
+    background: #fff; /* White background for contrast */
+    padding: 10px 15px; /* Compact padding */
+    margin: 10px 0; /* Reduced margin */
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    font-size: 14px;
+}
+
+.breadcrumbs ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.breadcrumbs li {
+    margin-right: 8px;
+}
+
+.breadcrumbs li:not(:last-child)::after {
+    content: '>';
+    margin-left: 8px;
+    color: #666; /* Gray separator */
+}
+
+.breadcrumbs a {
+    color: #005670; /* D&B-inspired blue for links */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.breadcrumbs a:hover {
+    color: #007a99; /* Lighter blue on hover */
+}
+
+.breadcrumbs .current {
+    color: #000; /* Black for current page */
+    font-weight: 500;
+}
+
+/* Hero Section: Prominent banner with solid background */
+.hero {
+    background: #005670; /* D&B-inspired blue for all pages */
+    height: 300px; /* Adjusted height for consistency */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Hero Content Styling: Text within hero sections */
+.hero-content {
+    text-align: center;
+    color: #fff; /* White text for readability */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Shadow for contrast */
+    padding: 15px 25px; /* Padding for text area */
+    max-width: 80%; /* Constrain width for readability */
+}
+
+.hero-content h1,
+.hero-content p {
+    font-size: 24px; /* Larger size for uniformity */
+    margin: 5px 0; /* Tightened margin */
+}
+
+.hero-content h1 {
+    font-weight: 700; /* Bold for emphasis */
+}
+
+/* Button Styling: Action buttons across the site */
+.btn {
+    display: inline-block;
+    background: #005670; /* D&B-inspired blue */
+    color: #fff; /* White text for contrast */
+    padding: 10px 20px; /* Compact padding */
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: background 0.3s ease;
+    margin: 10px 5px; /* Space between buttons */
+}
+
+.btn:hover {
+    background: #007a99; /* Lighter blue on hover */
+}
+
+/* Filter Button Styling: Order filter controls */
+.filter-btn {
+    margin-right: 10px;
+}
+
+.filter-btn.active {
+    background: #007a99; /* Active state matches button hover */
+}
+
+/* Section Styling: Content sections */
+.promotions,
+.featured-products,
+.testimonials,
+.products,
+.about,
+.feedback,
+.services,
+.faq {
+    padding: 30px 0; /* Adjusted padding to fit content */
+}
+
+/* Grid Layouts: Responsive card layouts */
+.promo-grid,
+.product-grid,
+.testimonial-grid,
+.team-grid,
+.case-study-grid,
+.about-grid,
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive multi-column grid */
+    gap: 15px; /* Consistent spacing */
+}
+
+.faq .container {
+    display: grid;
+    grid-template-columns: 1fr; /* Single-column layout for FAQs */
+    gap: 15px;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Fixed 2-column layout for contact form and info */
+    gap: 15px;
+}
+
+/* Container Styling: Content boxes */
+.about-container,
+.values-container,
+.team-container,
+.why-choose-container,
+.contact-container,
+.contact-info-container,
+.contact-form-container,
+.map-container {
+    background: #fff; /* White background for contrast */
+    padding: 15px; /* Reduced padding */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    margin-bottom: 15px; /* Reduced margin */
+    opacity: 0.95; /* Slight transparency for D&B-inspired look */
+}
+
+.team-container {
+    grid-column: 1 / -1; /* Span all columns to start on a new row */
+}
+
+/* Card Styling: Individual content cards */
+.promo-card,
+.product-card,
+.service-card,
+.testimonial-card,
+.team-card,
+.case-study-card,
+.faq-item {
+    background: #fff;
+    padding: 15px; /* Reduced padding */
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease; /* Smooth hover effect */
+    opacity: 0.95;
+}
+
+.promo-card:hover,
+.product-card:hover,
+.service-card:hover,
+.testimonial-card:hover,
+.team-card:hover,
+.case-study-card:hover,
+.faq-item:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+/* Image Styling: Images within cards */
+.promo-card img,
+.product-card img,
+.service-card img,
+.team-card img,
+.case-study-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Video Styling: Videos in case study cards */
+.case-study-video {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px; /* Reduced margin */
+}
+
+/* Filter Bar Styling: Order filter controls */
+.filter-bar {
+    margin: 10px 0; /* Reduced margin */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+}
+
+.filter-bar select {
+    padding: 8px;
+    border: 1px solid #d1d3d4; /* Light gray border */
+    border-radius: 5px;
+    font-size: 14px;
+    color: #000; /* Black text for select dropdown */
+}
+
+/* Contact Form Styling: Form inputs */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Reduced gap */
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 8px; /* Reduced padding */
+    border: 1px solid #d1d3d4;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #000; /* Black text for form inputs */
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 100px; /* Reduced height to fit content */
+}
+
+/* Map Container Styling: Embedded map image */
+.map-container img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-top: 10px; /* Reduced margin */
+}
+
+/* FAQ Item Styling: Accordion-style FAQs */
+.faq-item {
+    margin-bottom: 0; /* Remove margin as grid gap handles spacing */
+}
+
+.faq-question {
+    padding: 12px;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: 600;
+    margin: 0;
+    transition: background 0.3s ease;
+    color: #000; /* Black text for FAQ questions */
+}
+
+.faq-question:hover {
+    background: #f5f6f5; /* Light gray hover effect */
+}
+
+.faq-answer {
+    display: none;
+    padding: 12px;
+    border-top: 1px solid #d1d3d4;
+    color: #000; /* Black text for FAQ answers */
+}
+
+.faq-item.active .faq-answer {
+    display: block;
+}
+
+/* Footer Styling: Narrow footer with horizontal content alignment */
+footer {
+    background: #005670; /* D&B-inspired blue */
+    color: #fff; /* White text for all footer content */
+    padding: 20px 0; /* Reduced padding for narrower footer */
+    text-align: center;
+}
+
+.footer-grid {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px; /* Spacing between sections */
+    margin-bottom: 15px; /* Space before copyright */
+}
+
+.footer-grid div {
+    flex: 1; /* Distribute space evenly */
+    max-width: 300px; /* Constrain width for readability */
+}
+
+footer h3 {
+    font-size: 16px;
+    margin: 0 0 10px;
+}
+
+footer p, footer a {
+    font-size: 14px;
+    margin: 5px 0;
+    color: #fff; /* White text for all content and links */
+}
+
+footer a:hover {
+    color: #e0f7ff; /* Light blue on hover */
+}
+
+footer .container > p {
+    font-size: 12px;
+    margin: 0;
+}
+
+/* Order Modal Styling: For order submission form */
+.order-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 200;
+}
+
+.modal-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 500px;
+    width: 90%;
+    text-align: center;
+    color: #000; /* Black text for modal content */
+}
+
+.modal-content h3 {
+    margin: 0 0 10px;
+}
+
+.modal-content form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.modal-content input,
+.modal-content textarea {
+    padding: 8px;
+    border: 1px solid #d1d3d4;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #000;
+}
+
+.modal-content textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.modal-content .btn {
+    margin-top: 10px;
+}
+
+.modal-content .cancel {
+    background: #d32f2f; /* Red for cancel button */
+}
+
+.modal-content .cancel:hover {
+    background: #b71c1c; /* Darker red on hover */
+}
+
+/* Responsive Design: Adjustments for smaller screens */
+@media (max-width: 768px) {
+    header .logo,
+    header nav {
+        float: none;
+        text-align: center;
+    }
+
+    header nav ul li {
+        display: block;
+        margin: 8px 0;
+    }
+
+    .hero {
+        height: 250px; /* Reduced height for mobile */
+    }
+
+    .hero-content h1,
+    .hero-content p {
+        font-size: 20px; /* Larger size for mobile */
+    }
+
+    .filter-bar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .breadcrumbs ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .breadcrumbs li {
+        margin-bottom: 5px;
+    }
+
+    .breadcrumbs li:not(:last-child)::after {
+        display: none; /* Remove separator for vertical layout */
+    }
+
+    .footer-grid {
+        flex-direction: column; /* Stack sections vertically on mobile */
+        align-items: center;
+        gap: 15px;
+    }
+
+    .footer-grid div {
+        max-width: 100%; /* Full width on mobile */
+        text-align: center;
+    }
+
+    /* Revert grids to single column on mobile */
+    .promo-grid,
+    .product-grid,
+    .feedback-grid,
+    .about-grid,
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+}

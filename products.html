@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FrancisTown Aluminium - Orders</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header with logo and navigation -->
+    <header>
+        <div class="container">
+            <a href="index.html">
+            <img src="images/logo.png" alt="FrancisTown Aluminium Logo" class="logo">
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="products.html" class="active">Orders</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="feedback.html">Feedback</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- Breadcrumbs -->
+    <nav class="breadcrumbs">
+        <div class="container">
+            <ul id="breadcrumb-list"></ul>
+        </div>
+    </nav>
+    <!-- Hero section with solid background -->
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Place Your Order</h1>
+                <p>Select items to place your order for windows, doors, and frames designed for durability and aesthetics.</p>
+            </div>
+        </section>
+        <section class="products">
+            <div class="container">
+                <div class="filter-bar">
+                    <button id="category-filter-windows" class="btn filter-btn" data-category="windows">Windows</button>
+                    <button id="category-filter-doors" class="btn filter-btn" data-category="doors">Doors</button>
+                    <button id="category-filter-frames" class="btn filter-btn" data-category="frames">Frames</button>
+                    <button id="category-filter-all" class="btn filter-btn active" data-category="all">All</button>
+                    <select id="price-filter">
+                        <option value="all">All Prices</option>
+                        <option value="low">BWP 0 - 1000</option>
+                        <option value="mid">BWP 1001 - 2000</option>
+                        <option value="high">BWP 2001+</option>
+                    </select>
+                </div>
+                <div class="product-grid" id="products">
+                    <div class="product-card" data-category="windows">
+                        <img src="images/product1.jpg" alt="Aluminium Window">
+                        <h3>Aluminium Window</h3>
+                        <p>Price: BWP 1200</p>
+                        <p>Energy-efficient window with a modern design, ideal for homes and offices.</p>
+                        <button class="btn place-order" data-id="1" data-name="Aluminium Window" data-price="1200" data-category="windows">Place Order</button>
+                    </div>
+                    <div class="product-card" data-category="windows">
+                        <img src="images/product6.jpg" alt="Casement Window">
+                        <h3>Casement Window</h3>
+                        <p>Price: BWP 1500</p>
+                        <p>Classic casement style with secure locking and excellent ventilation.</p>
+                        <button class="btn place-order" data-id="6" data-name="Casement Window" data-price="1500" data-category="windows">Place Order</button>
+                    </div>
+                    <div class="product-card" data-category="windows">
+                        <img src="images/product7.jpg" alt="Sliding Window">
+                        <h3>Sliding Window</h3>
+                        <p>Price: BWP 1300</p>
+                        <p>Smooth-sliding window with a minimalist design for easy operation.</p>
+                        <button class="btn place-order" data-id="7" data-name="Sliding Window" data-price="1300" data-category="windows">Place Order</button>
+                    </div>
+                    <div class="product-card" data-category="doors">
+                        <img src="images/product2.jpg" alt="Sliding Door">
+                        <h3>Sliding Door</h3>
+                        <p>Price: BWP 2500</p>
+                        <p>Sleek sliding door for patios, balconies, or large entrances.</p>
+                        <button class="btn place-order" data-id="2" data-name="Sliding Door" data-price="2500" data-category="doors">Place Order</button>
+                    </div>
+                    <div class="product-card" data-category="doors">
+                        <img src="images/product3.jpg" alt="Glass Door">
+                        <h3>Glass Door</h3>
+                        <p>Price: BWP 1800</p>
+                        <p>Elegant glass door with sturdy aluminium frame for modern interiors.</p>
+                        <button class="btn place-order" data-id="3" data-name="Glass Door" data-price="1800" data-category="doors">Place Order</button>
+                    </div>
+                    <div class="product-card" data-category="doors">
+                        <img src="images/product8.jpg" alt="Pivot Door">
+                        <h3>Pivot Door</h3>
+                        <p>Price: BWP 2700</p>
+                        <p>Contemporary pivot door for a bold entrance statement.</p>
+                        <button class="btn place-order" data-id="8" data-name="Pivot Door" data-price="2700" data-category="doors">Place Order</button>
+                    </div>
+                    <div class="product-card" data-category="doors">
+                        <img src="images/product9.jpg" alt="Folding Door">
+                        <h3>Folding Door</h3>
+                        <p>Price: BWP 3000</p>
+                        <p>Versatile folding door for flexible space management.</p>
+                        <button class="btn place-order" data-id="9" data-name="Folding Door" data-price="3000" data-category="doors">Place Order</button>
+                    </div>
+                    <div class="product-card" data-category="frames">
+                        <img src="images/product4.jpg" alt="Window Frame">
+                        <h3>Window Frame</h3>
+                        <p>Price: BWP 600</p>
+                        <p>Durable aluminium frame for custom window installations.</p>
+                        <button class="btn place-order" data-id="4" data-name="Window Frame" data-price="600" data-category="frames">Place Order</button>
+                    </div>
+                    <div class="product-card" data-category="frames">
+                        <img src="images/product5.jpg" alt="Aluminium Door Frame">
+                        <h3>Aluminium Door Frame</h3>
+                        <p>Price: BWP 900</p>
+                        <p>Robust frame for secure and stylish door installations.</p>
+                        <button class="btn place-order" data-id="5" data-name="Aluminium Door Frame" data-price="900" data-category="frames">Place Order</button>
+                    </div>
+                    <div class="product-card" data-category="frames">
+                        <img src="images/product10.jpg" alt="Custom Frame">
+                        <h3>Custom Frame</h3>
+                        <p>Price: BWP 800</p>
+                        <p>Customizable aluminium frame for unique window or door projects.</p>
+                        <button class="btn place-order" data-id="10" data-name="Custom Frame" data-price="800" data-category="frames">Place Order</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer with horizontally aligned content and social links opening in new tab -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <h3>About FrancisTown Aluminium</h3>
+                    <p>Your trusted supplier for windows, doors, and building materials in Francistown, Botswana.</p>
+                </div>
+                <div>
+                    <h3>Contact Info</h3>
+                    <p>Location: Selepa, Francistown, RH63+2QX</p>
+                    <p>Email: <a href="mailto:Cmaphika@gmail.com">Cmaphika@gmail.com</a></p>
+                    <p>Phone: +267 75 062 345</p>
+                </div>
+                <div>
+                    <h3>Follow Us</h3>
+                    <p>
+                        <a href="https://www.tiktok.com/@ftown_aluminium_wind" target="_blank" rel="noopener noreferrer">TikTok</a><br>
+                        <a href="https://www.facebook.com/22Alu" target="_blank" rel="noopener noreferrer">Facebook</a>
+                    </p>
+                </div>
+            </div>
+            <p>© 2025 FrancisTown Aluminium. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
